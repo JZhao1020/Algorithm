@@ -1,0 +1,26 @@
+{
+    "name": "hao/algorithm",
+    "homepage": "https://github.com/JZhao1020/algorithm",
+    "description": "api接口限流",
+    "type": "library",
+    "authors": [
+        {
+            "name": "JZ浩",
+            "email": "18816784184@163.com"
+        }
+    ],
+    "keywords": [
+        "Algorithm"
+    ],
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Aliyun\\": "src"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*",
+        "ext-openssl": "*"
+    }
+}
