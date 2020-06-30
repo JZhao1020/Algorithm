@@ -15,12 +15,10 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Aliyun\\": "src"
+            "limiting\\": "src"
         }
     },
     "require": {
-        "php": ">=5.3.3",
-        "ext-curl": "*",
-        "ext-openssl": "*"
+        "php": ">=5.3.3"
     }
 }
