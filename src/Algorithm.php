@@ -8,6 +8,8 @@ use \limiting\lib\Log;
 
 class Algorithm{
     private $config;
+    // redis连接配置
+    private $redis_config = [];
 
     private $gateways;
 
@@ -15,7 +17,7 @@ class Algorithm{
      * Pay constructor.
      * @param array $config
      */
-    public function __construct(array $config = [])
+    public function __construct(array $config = [], array $redis_config = [])
     {
         $this->config = $config;
     }
@@ -42,7 +44,7 @@ class Algorithm{
         }
         $gateway = __NAMESPACE__ . '\\driver\\' . ucfirst($gateway) . 'Algorithm';
 
-        $redis = new Redis();
+        $redis = new Redis($this->redis_config);
         $log = new Log();
         return new $gateway($redis, $log, $this->config);
     }
