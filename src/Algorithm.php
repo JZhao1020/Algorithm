@@ -20,6 +20,7 @@ class Algorithm{
     public function __construct(array $config = [], array $redis_config = [])
     {
         $this->config = $config;
+        $this->redis_config = $redis_config;
     }
 
     /**
